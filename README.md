@@ -5,7 +5,6 @@ This plugin allows you to parse custom data-format to format accepted by CanvasJ
 
 
 ## CanvasJS
---------
 CanvasJS is an HTML5 & JavaScript based Charting Library that runs on all modern devices including iPhone, Android, Desktops, etc. Charts are beautiful and API is very simple to use.
 
 #### CanvasJS Features:
