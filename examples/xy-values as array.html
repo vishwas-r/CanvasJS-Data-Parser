@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+<script src="../dist/canvasjs-dataparser.min.js"> </script>
+<script type="text/javascript">
+window.onload = function () {
+var dps = [[1,71], [2,55], [3,50], [4,65], [5,95], [6,68], [7,28], [8,34], [9,14]];
+var chart = new CanvasJS.Chart("chartContainer", {
+	theme: "light1", // "light1", "dark1", "dark2"
+	animationEnabled: true, // change to true		
+	title:{
+		text: "Basic Column Chart"
+	},
+	data: [{
+		// Change type to "bar", "area", "spline", "pie",etc.
+		type: "column",
+		dataPoints: CanvasJS.parseData(dps)
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
+</body>
+</html>
