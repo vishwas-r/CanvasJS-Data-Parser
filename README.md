@@ -40,3 +40,7 @@ CanvasJS is an HTML5 & JavaScript based Charting Library that runs on all modern
 Code: [Github Repo](https://github.com/vishwas-r/CanvasJS-Data-Parser)
 
 Documentation: [CanvasJS Documentation](https://canvasjs.com/docs/)
+
+##### Note: 
+- Plugin was last tested with **CanvasJS Chart v3.2.3GA**
+- This plugin requires you to have CanvasJS License. Please visit **[CanvasJS](https://canvasjs.com/license/)** for more info.
