@@ -28,5 +28,5 @@ Code: [Github Repo](https://github.com/vishwas-r/CanvasJS-Data-Parser)
 Documentation: [CanvasJS Documentation](https://canvasjs.com/docs/)
 
 ##### Note: 
-- Plugin was last tested with **CanvasJS Chart v3.4 Beta 1**
+- Plugin was last tested with **CanvasJS Chart v3.6.6GA**
 - This plugin requires you to have CanvasJS License. Please visit **[CanvasJS](https://canvasjs.com/license/)** for more info.
