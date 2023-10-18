@@ -22,22 +22,42 @@ var chart1 = new CanvasJS.Chart("chartContainer1", {
 	}]
 });
 chart1.render();
+
+var chart2 = new CanvasJS.Chart("chartContainer2", {
+	theme: "light2", // "light1", "dark1", "dark2"
+	animationEnabled: true,
+	title:{
+		text: "CanvasJS Chart from JSON"              
+	},
+	toolTip: {
+		shared: true
+	},
+	data: [{
+		type: "column",
+		xValueType: "dateTime"
+	}, {
+		type: "column",
+		xValueType: "dateTime"
+	}]
+});
+chart2.parseJSONAndRender("https://api.npoint.io/6f8153fa498ba8522ab8", {x: "date", y: "units"});
 }
 </script>
 </head>
 <body>
 	<h1>CanvasJS Chart DataParser</h1>
 	<p>This plugin allows you to parse custom data-format to format accepted by CanvasJS. Check out <a href="https://github.com/vishwas-r/CanvasJS-Data-Parser/">Github Repository</a> for more info / examples.</p>
-	<h4>Live Example</h4>
+	<h2>Live Examples</h2>
+	<h3>1. Datapoints as Array</h3>
 	<div id="chartContainer1" style="height: 360px; width: 80%; border: 1px solid black;"></div>
-	<h4>How to Use?</h4>
+	<h3>How to Use?</h3>
 	<pre><code>var chart = new CanvasJS.Chart("chartContainer", {
 	.
 	.
 	.
 	//Chart Options
 	data: [{
-		dataPoints: CanvasJS.parseData([71,55,50,65,95,68,28,34,14])
+		dataPoints: <b>CanvasJS.parseData([71,55,50,65,95,68,28,34,14])</b>
 	}]
 	.
 	.
@@ -46,10 +66,32 @@ chart1.render();
 });
 chart.render();
 </code></pre>
+	
+	<h3>Datapoints from JSON</h3>
+	<div id="chartContainer2" style="width: 80%; height: 360px; border: 1px solid black;"></div>
+	<h3>How to Use?</h3>
+	<pre><code>var chart = new CanvasJS.Chart("chartContainer", {
+	.
+	.
+	.
+	//Chart Options
+	data: [{
+		type: "column"
+	}, {
+		type: "column"
+	}]
+	.
+	.
+	.
+	.
+});
+<b>chart.parseJSONAndRender("https://api.npoint.io/6f8153fa498ba8522ab8", {x: "date", y: "units"});</b>
+</code></pre>
+	
 <h4>Resources:</h4>
 <p>Code: <a href="https://github.com/vishwas-r/CanvasJS-Data-Parser">Github Repo</a></p>
 <p>Documentation: <a href="https://canvasjs.com/docs/">CanvasJS Documentation</a></p>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+<script src="https://cdn.canvasjs.com/canvasjs.min.js"> </script>
 <script src="dist/canvasjs-dataparser.min.js"> </script>
 </body>
 </html>
